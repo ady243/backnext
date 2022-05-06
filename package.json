@@ -1,0 +1,32 @@
+{
+  "name": "BACK",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "jsonwebtoken": "^8.5.1",
+    "knex": "^1.0.3",
+    "nodemon": "^2.0.15",
+    "objection": "^3.0.1",
+    "payload": "^0.16.1",
+    "pg": "^8.7.3",
+    "yup": "^0.32.11"
+  },
+  "devDependencies": {
+    "eslint": "^8.10.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-react": "^7.29.3",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "prettier": "^2.5.1"
+  }
+}

@@ -1,0 +1,70 @@
+@import '../../../scss/styles.scss';
+
+.banner {
+  font-size: 1rem;
+  line-height: base(1);
+  border: 0;
+  vertical-align: middle;
+  background: rgba($color-dark-gray, .1);
+  color: $color-dark-gray;
+  border-radius: $style-radius-s;
+  padding: base(.5);
+  margin-bottom: $baseline;
+
+  &--has-action {
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  &--has-icon {
+    display: flex;
+    svg {
+      display: block;
+    }
+  }
+
+  &--type-default {
+    &.button--has-action {
+      &:hover {
+        background: darken($color-dark-gray, .15);
+      }
+
+      &:active {
+        background: darken($color-dark-gray, .2);
+      }
+    }
+  }
+
+  &--type-error {
+    background: rgba($color-red, .1);
+    color: $color-red;
+
+    svg {
+      @include color-svg($color-red);
+    }
+
+    &.button--has-action {
+      &:hover {
+        background: rgba($color-red, .15);
+      }
+
+      &:active {
+        background: rgba($color-red, .2);
+      }
+    }
+  }
+
+  &--type-success {
+    background: $color-green;
+
+    &.button--has-action {
+      &:hover {
+        background: rgba($color-green, .15);
+      }
+
+      &:active {
+        background: rgba($color-green, .2);
+      }
+    }
+  }
+}

@@ -1,0 +1,55 @@
+@import 'vars';
+@import '~react-toastify/dist/ReactToastify.css';
+
+.Toastify {
+  .Toastify__toast-container {
+    left: base(5);
+    transform: none;
+    right: base(5);
+    width: auto;
+  }
+
+  .Toastify__toast {
+    padding: base(.5);
+    border-radius: $style-radius-m;
+    font-weight: 600;
+  }
+
+  .Toastify__close-button {
+    align-self: center;
+    opacity: .7;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  .Toastify__toast--success {
+    color: $color-dark-gray;
+    background: $color-green;
+  }
+
+  .Toastify__close-button--success {
+    color: $color-dark-gray;
+  }
+
+  .Toastify__progress-bar {
+    background-color: rgba(255,255,255, 0.7);
+  }
+
+  .Toastify__toast--error {
+    background: $color-red;
+    color: #fff;
+  }
+
+  .Toastify__close-button--light {
+    color: inherit;
+  }
+
+  @include mid-break {
+    .Toastify__toast-container {
+      left: $baseline;
+      right: $baseline;
+    }
+  }
+}

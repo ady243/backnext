@@ -1,0 +1,18 @@
+@import '../../../../scss/styles.scss';
+
+.field-type.textarea {
+  position: relative;
+  margin-bottom: $baseline;
+
+  textarea {
+    @include formInput();
+    height: auto;
+    min-height: base(3);
+  }
+
+  &.error {
+    textarea {
+      background-color: lighten($color-red, 20%);
+    }
+  }
+}

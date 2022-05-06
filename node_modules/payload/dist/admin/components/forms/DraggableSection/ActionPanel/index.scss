@@ -1,0 +1,12 @@
+@import '../../../../scss/styles';
+
+.action-panel {
+
+  &__remove-row {
+    margin: 0 0 base(.3);
+  }
+
+  &__add-row {
+    margin: base(.3) 0 0;
+  }
+}

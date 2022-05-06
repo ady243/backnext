@@ -1,0 +1,13 @@
+@import '../../../scss/styles.scss';
+
+label.field-label {
+  display: flex;
+  padding-bottom: base(.25);
+  color: $color-dark-gray;
+
+  .required {
+    color: $color-red;
+    margin-left: base(.25);
+    margin-right: auto;
+  }
+}

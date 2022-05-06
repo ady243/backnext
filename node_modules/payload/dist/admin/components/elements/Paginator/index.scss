@@ -1,0 +1,48 @@
+@import '../../../scss/styles.scss';
+
+.paginator {
+  display: flex;
+  margin-bottom: $baseline;
+
+  &__page {
+    cursor: pointer;
+
+    &--is-current {
+      background: $color-background-gray;
+      color: $color-gray;
+      cursor: default;
+    }
+
+    &--is-last-page {
+      margin-right: 0;
+    }
+  }
+
+  .clickable-arrow,
+  &__page {
+    @extend %btn-reset;
+    width: base(2);
+    height: base(2);
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    outline: 0;
+    padding: base(.5);
+    color: $color-dark-gray;
+    line-height: base(1);
+
+    &:hover:not(.clickable-arrow--is-disabled) {
+      background: $color-background-gray;
+    }
+  }
+
+  &__page,
+  &__separator {
+    margin-right: base(.25);
+  }
+
+  &__separator {
+    align-self: center;
+    color: $color-gray;
+  }
+}

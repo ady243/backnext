@@ -1,0 +1,50 @@
+@import '../../../../scss/styles.scss';
+
+.group {
+  margin-top: base(2);
+  margin-bottom: base(2);
+  display: flex;
+  position: relative;
+
+  &__header {
+    margin-bottom: base(1);
+  }
+
+  &__title {
+    margin-bottom: 0;
+  }
+
+  &:hover {
+    .field-type-gutter__content-container {
+      box-shadow: #{$style-stroke-width-m} 0px 0px 0px $color-dark-gray;
+    }
+  }
+
+  &__content-wrapper {
+    width: 100%;
+  }
+
+  &__fields-wrapper {
+    position: relative;
+  }
+
+  .render-fields {
+    width: 100%;
+
+    .row {
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &--no-label {
+    margin-top: 0,
+  }
+
+  @include mid-break {
+    &__fields-wrapper {
+      display: flex;
+    }
+  }
+}

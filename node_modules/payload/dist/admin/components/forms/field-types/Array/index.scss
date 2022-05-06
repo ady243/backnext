@@ -1,0 +1,63 @@
+@import '../../../../scss/styles.scss';
+
+.field-type.array {
+  margin: base(2) 0;
+  min-width: base(15);
+
+  &__header {
+    h3 {
+      margin-bottom: 0;
+    }
+
+    margin-bottom: base(1);
+  }
+
+  &__error-wrap {
+    position: relative;
+  }
+
+  &__add-button-wrap {
+    margin-left: base(0);
+
+    .btn {
+      color: $color-gray;
+      margin: 0;
+
+      &:hover {
+        color: $color-dark-gray;
+      }
+    }
+  }
+
+  .section .section {
+    margin-top: 0;
+  }
+
+  .section__content {
+    > div > div {
+      width: 100%;
+    }
+  }
+
+  .render-fields {
+    .row {
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  @include mid-break {
+    min-width: calc(100vw - #{base(2)});
+  }
+}
+
+.field-type.group,
+.field-type.array,
+.field-type.blocks {
+  .field-type.array {
+    .field-type.array__add-button-wrap {
+      margin-left: base(3);
+    }
+  }
+}

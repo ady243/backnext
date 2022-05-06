@@ -1,0 +1,20 @@
+import React, { ChangeEvent } from 'react';
+import { TextField } from '../../../../../fields/config/types';
+import { Description } from '../../FieldDescription/types';
+import './index.scss';
+export declare type TextInputProps = Omit<TextField, 'type'> & {
+    showError?: boolean;
+    errorMessage?: string;
+    readOnly?: boolean;
+    path: string;
+    required?: boolean;
+    value?: string;
+    description?: Description;
+    onChange?: (e: ChangeEvent<HTMLInputElement>) => void;
+    placeholder?: string;
+    style?: React.CSSProperties;
+    className?: string;
+    width?: string;
+};
+declare const TextInput: React.FC<TextInputProps>;
+export default TextInput;

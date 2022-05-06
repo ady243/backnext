@@ -1,0 +1,19 @@
+const userRoute = ({ app, db }) => {
+  app.post("/users", async (req, res) => {
+    const {
+      body: { email, password },
+    } = req;
+    const [user] = await db("users")
+      .insert({
+        email,
+        passwordHash: password,
+        passwordSalt: password,
+      })
+      .returning("*");
+    res.send(user);
+  });
+};
+
+export default userRoute;
+
+

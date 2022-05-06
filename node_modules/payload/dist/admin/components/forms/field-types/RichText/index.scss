@@ -1,0 +1,78 @@
+@import '../../../../scss/styles.scss';
+
+.rich-text {
+  margin-bottom: base(2);
+  display: flex;
+
+  &__toolbar {
+    @include blur-bg(white);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    margin-bottom: $baseline;
+    border: $style-stroke-width-s solid $color-light-gray;
+    padding: base(.25);
+    position: sticky;
+    top: base(5);
+  }
+
+  &__editor {
+
+    [data-slate-node=element] {
+      margin-bottom: base(0.25);
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      margin-bottom: base(.5);
+    }
+  }
+
+  &__input {
+    min-height: base(10);
+  }
+
+  &__wrap {
+    width: 100%;
+    position: relative;
+  }
+
+  &__wrapper {
+    width: 100%;
+  }
+
+  &--read-only {
+    .rich-text__editor {
+      background-color: $color-light-gray;
+      padding: base(.5);
+    }
+  }
+
+  &__button {
+    @extend %btn-reset;
+    padding: base(0.25);
+
+    svg {
+      @include color-svg($color-dark-gray);
+      width: base(0.75);
+      height: base(0.75);
+    }
+
+    &:hover {
+      background-color: $color-background-gray;
+    }
+
+    &__button--active,
+    &__button--active:hover {
+      background-color: $color-light-gray;
+    }
+  }
+}
+
+.field-type.blocks {
+  .rich-text__toolbar {
+    top: base(7);
+  }
+}

@@ -1,0 +1,15 @@
+@import '../../../scss/styles';
+
+.field-error.tooltip {
+  top: 0;
+  bottom: auto;
+  left: auto;
+  right: base(.5);
+  transform: none;
+  background-color: $color-red;
+
+  span {
+    border-top-color: $color-red;
+  }
+}
+
